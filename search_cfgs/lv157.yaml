@@ -1,0 +1,8 @@
+num_layer: 32
+num_sys_token: 35
+num_img_token: 576
+num_txt_token: 100
+feat_dim: 4096
+mlp_dim: 11008
+mha_in_scale_path: "/projectnb/ivc-ml/amliu/slm/FastV/skip_search_ranks/mha_scales.npy"
+mlp_scale_path: "/projectnb/ivc-ml/amliu/slm/FastV/skip_search_ranks/mlp_scales.npy"

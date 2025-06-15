@@ -1,0 +1,18 @@
+num_layer: 32
+feat_dim: 4096
+mlp_dim: 11008
+acc_threshold_ratio: 0.3
+greedy_steps: 15
+greedy_task: gqa
+greedy_metric: exact_match,none
+random_vtokens: false
+img_cls_vtokens: true
+prune_groups: [1, 2]
+img_group_ratios: [0.25, 0.75]
+token_groups: ['sys', 'img0', 'img1', 'txt']
+token_nums: [35, 144, 432, 100]
+prune_ops: [1, 2, 0]
+mha_in_scale_path: Null
+mlp_scale_path: Null
+remove_key_out: false
+remove_key_layer: 6
