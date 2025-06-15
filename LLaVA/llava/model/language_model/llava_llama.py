@@ -73,9 +73,15 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
         if prune_config.img_cls_vtokens:
             self.visual_token_num = prune_config.token_nums[1]
         
-        mha_in_scale = np.load(prune_config.mha_in_scale_path)
+        if prune_config.mha_in_scale_path is None:
+            mha_in_scale = np.ones((len(self.model.layers), 3))
+        else:
+            mha_in_scale = np.load(prune_config.mha_in_scale_path)
         mha_out_scale = np.ones((len(self.model.layers), 3))
-        mlp_scale = np.load(prune_config.mlp_scale_path)
+        if prune_config.mlp_scale_path is None:
+            mlp_scale = np.ones((len(self.model.layers), 3))
+        else:
+            mlp_scale = np.load(prune_config.mlp_scale_path)
         scale_nps = [mha_out_scale, mha_in_scale, mlp_scale]
         sys_cached_pos = []
         

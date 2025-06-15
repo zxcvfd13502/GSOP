@@ -1,4 +1,4 @@
-export HF_HOME='/projectnb/ivc-ml/amliu/huggingface'
+export HF_HOME='Your HF Home Path'
 
 python3 -m accelerate.commands.launch \
     --num_processes=4 \
@@ -13,4 +13,4 @@ python3 -m accelerate.commands.launch \
     --attn_implementation eager\
     --output_path ./logs/check/\
     --desire_prune_ratio 0.30\
-    --prune_config_path /projectnb/ivc-ml/amliu/slm/lmms-eval/open_v1_res/clsatt/img_only/lv157/gqa/r1_4/cls_att_g12o120_gqa_500q_llh_s1_step15
+    --prune_config_path ./search_res/cls_att_g12o120_gqa_500q_llh_s1_step15

@@ -13,8 +13,10 @@ conda activate gsop
 cd lmms-eval
 pip install -e .
 
-cd ../lmms-eval
+cd ../LLaVA
 pip install -e .
+
+pip install easydict
 ```
 
 For additional setup instructions, please refer to:
